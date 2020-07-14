@@ -1,0 +1,4 @@
+name = "SIGIL"
+uuid = "9f1dfee5-f71f-4155-843d-ddc6982c7192"
+authors = ["tristan "]
+version = "0.1.0"
