@@ -1,65 +1,64 @@
-## TODO
-# Fix directory to defult to file location
-
 module SIGIL
 
-using Cxx
-using Libdl
+    using CxxWrap
 
-WINDOW_OPEN = false
-include("SIGIL_CORE.jl")
+    @wrapmodule joinpath(pkgdir(SIGIL), "src\\windows\\libjuliaSIGIL.dll")
 
-export
+    function __init__()
+        @initcxx
+    end
+
+# export
 # main functions
-    slWindow,
-    slShowCursor,
-    slClose,
-    slShouldClose,
-    slGetKey,
-    slGetMouseButton,
-    slGetMouseX,
-    slGetMouseY,
-    slGetDeltaTime,
-    slGetTime,
-    slRender,
-    slSetBackColor,
-    slSetForeColor,
-    slSetAdditiveBlend,
-    slPush,
-    slPop,
-    slTranslate,
-    slRotate,
-    slScale,
-    slLoadTexture,
-    slLoadWAV,
-    slSoundPlay,
-    slSoundLoop,
-    slSoundPause,
-    slSoundStop,
-    slSoundPauseAll,
-    slSoundResumeAll,
-    slSoundStopAll,
-    slSoundPlaying,
-    slSoundLooping,
-    slTriangleFill,
-    slTriangleOutline,
-    slRectangleFill,
-    slRectangleOutline,
-    slCircleFill,
-    slCircleOutline,
-    slSemiCircleFill,
-    slSemiCircleOutline,
-    slPoint,
-    slLine,
-    slSetSpriteTiling,
-    slSetSpriteScroll,
-    slSprite,
-    slSetTextAlign,
-    slGetTextWidth,
-    slGetTextHeight,
-    slLoadFont,
-    slSetFont,
-    slSetFontSize,
-    slText
+    # slWindow,
+    # slShowCursor,
+    # slClose,
+    # slShouldClose,
+    # slGetKey,
+    # slGetMouseButton,
+    # slGetMouseX,
+    # slGetMouseY,
+    # slGetDeltaTime,
+    # slGetTime,
+    # slRender,
+    # slSetBackColor,
+    # slSetForeColor,
+    # slSetAdditiveBlend,
+    # slPush,
+    # slPop,
+    # slTranslate,
+    # slRotate,
+    # slScale,
+    # slLoadTexture,
+    # slLoadWAV,
+    # slSoundPlay,
+    # slSoundLoop,
+    # slSoundPause,
+    # slSoundStop,
+    # slSoundPauseAll,
+    # slSoundResumeAll,
+    # slSoundStopAll,
+    # slSoundPlaying,
+    # slSoundLooping,
+    # slTriangleFill,
+    # slTriangleOutline,
+    # slRectangleFill,
+    # slRectangleOutline,
+    # slCircleFill,
+    # slCircleOutline,
+    # slSemiCircleFill,
+    # slSemiCircleOutline,
+    # slPoint,
+    # slLine,
+    # slSetSpriteTiling,
+    # slSetSpriteScroll,
+    # slSprite,
+    # slSetTextAlign,
+    # slGetTextWidth,
+    # slGetTextHeight,
+    # slLoadFont,
+    # slSetFont,
+    # slSetFontSize,
+    # slText
 
 end # module
